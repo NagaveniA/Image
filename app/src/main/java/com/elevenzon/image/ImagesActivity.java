@@ -178,7 +178,7 @@ public class ImagesActivity extends Activity {
     }
 
     public File createImageFile() {
-        // Create an image file name;
+        // Create an image file name
         String dateTime = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "IMG_" + dateTime + "_";
         File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -187,7 +187,7 @@ public class ImagesActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // Save a file: path for use with ACTION_VIEW intents;
+        // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = "file:" + image.getAbsolutePath();
         return image;
     }
