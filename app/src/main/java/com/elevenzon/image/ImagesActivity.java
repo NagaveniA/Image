@@ -152,7 +152,7 @@ public class ImagesActivity extends Activity {
         startActivityForResult(intent, PICK_IMAGES);
     }
 
-    // Add image in SelectedArrayList
+    // Add image in selectedImageList
     public void selectImage(int position) {
         // Check before add new item in ArrayList;
         if (!selectedImageList.contains(imageList.get(position).getImage())) {
@@ -230,7 +230,6 @@ public class ImagesActivity extends Activity {
         }
     }
 
-    // add image in selectedImageList and imageList
     public void checkImage(String filePath) {
         // Check before adding a new image to ArrayList to avoid duplicate images
         if (!selectedImageList.contains(filePath)) {
