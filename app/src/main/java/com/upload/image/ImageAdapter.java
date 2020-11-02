@@ -1,4 +1,4 @@
-package com.elevenzon.image;
+package com.upload.image;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,9 +11,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
 import java.util.ArrayList;
 
-public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private ArrayList<ImageModel> imageList;
@@ -27,8 +28,8 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     }
 
     @Override
-    public  RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == IMAGE_LIST) {;
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == IMAGE_LIST) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_list, parent, false);
             return new ImageListViewHolder(view);
         } else {
@@ -43,8 +44,9 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     }
 
     @Override
-    public  void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
-        if (holder.getItemViewType() == IMAGE_LIST) {;
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        if (holder.getItemViewType() == IMAGE_LIST) {
+            ;
             final ImageListViewHolder viewHolder = (ImageListViewHolder) holder;
             Glide.with(context)
                     .load(imageList.get(position).getImage())
@@ -53,12 +55,15 @@ public class ImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                     .transition(DrawableTransitionOptions.withCrossFade(500))
                     .into(viewHolder.image);
 
-            if (imageList.get(position).isSelected()) {;
+            if (imageList.get(position).isSelected()) {
+                ;
                 viewHolder.checkBox.setChecked(true);
-            } else {;
+            } else {
+                ;
                 viewHolder.checkBox.setChecked(false);
             }
-        } else {;
+        } else {
+            ;
             ImagePickerViewHolder viewHolder = (ImagePickerViewHolder) holder;
             viewHolder.image.setImageResource(imageList.get(position).getResImg());
             viewHolder.title.setText(imageList.get(position).getTitle());

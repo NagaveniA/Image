@@ -1,4 +1,4 @@
-package com.elevenzon.image;
+package com.upload.image;
 
 public class ImageModel {
 

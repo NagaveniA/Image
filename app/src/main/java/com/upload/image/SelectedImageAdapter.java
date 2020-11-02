@@ -1,4 +1,4 @@
-package com.elevenzon.image;
+package com.upload.image;
 
 import android.content.Context;
 import android.content.Intent;

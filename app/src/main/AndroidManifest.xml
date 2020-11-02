@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.elevenzon.image">
+    package="com.upload.image">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ImagesActivity"
+            android:name="com.upload.image.ImagesActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".FullImageActivity"
+            android:name="com.upload.image.FullImageActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
     </application>
